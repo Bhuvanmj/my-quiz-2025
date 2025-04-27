@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Communication Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2e6da4; }
+        .question { margin-bottom: 15px; }
+        .correct-answer { display: none; color: green; }
+        .score { font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Data Communication Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            1. What is the main goal of data communication in computer networks?<br>
+            <input type="radio" name="q1" value="x"> a) Printing documents<br>
+            <input type="radio" name="q1" value="x"> b) Sharing multimedia only<br>
+            <input type="radio" name="q1" value="c"> c) Reliable exchange of data between devices<br>
+            <input type="radio" name="q1" value="x"> d) Playing games<br>
+            <div class="correct-answer">Correct Answer: c) Reliable exchange of data between devices</div>
+        </div>
+
+        <div class="question">
+            2. Which mode allows data to flow in both directions, but only one at a time?<br>
+            <input type="radio" name="q2" value="x"> a) Simplex<br>
+            <input type="radio" name="q2" value="c"> b) Half-Duplex<br>
+            <input type="radio" name="q2" value="x"> c) Full-Duplex<br>
+            <input type="radio" name="q2" value="x"> d) Analog<br>
+            <div class="correct-answer">Correct Answer: b) Half-Duplex</div>
+        </div>
+
+        <div class="question">
+            3. Which transmission medium uses light signals for data transmission?<br>
+            <input type="radio" name="q3" value="x"> a) Twisted Pair<br>
+            <input type="radio" name="q3" value="x"> b) Coaxial Cable<br>
+            <input type="radio" name="q3" value="c"> c) Optical Fiber<br>
+            <input type="radio" name="q3" value="x"> d) Infrared<br>
+            <div class="correct-answer">Correct Answer: c) Optical Fiber</div>
+        </div>
+
+        <div class="question">
+            4. Which protocol is mainly used for sending and receiving email?<br>
+            <input type="radio" name="q4" value="x"> a) HTTP<br>
+            <input type="radio" name="q4" value="x"> b) FTP<br>
+            <input type="radio" name="q4" value="x"> c) TCP/IP<br>
+            <input type="radio" name="q4" value="c"> d) SMTP<br>
+            <div class="correct-answer">Correct Answer: d) SMTP</div>
+        </div>
+
+        <div class="question">
+            5. What type of data transmission sends one bit at a time and is good for long distances?<br>
+            <input type="radio" name="q5" value="x"> a) Parallel<br>
+            <input type="radio" name="q5" value="c"> b) Serial<br>
+            <input type="radio" name="q5" value="x"> c) Analog<br>
+            <input type="radio" name="q5" value="x"> d) Digital<br>
+            <div class="correct-answer">Correct Answer: b) Serial</div>
+        </div>
+
+        <div class="question">
+            6. Which network device broadcasts data to all devices in a network?<br>
+            <input type="radio" name="q6" value="x"> a) Switch<br>
+            <input type="radio" name="q6" value="c"> b) Hub<br>
+            <input type="radio" name="q6" value="x"> c) Modem<br>
+            <input type="radio" name="q6" value="x"> d) Router<br>
+            <div class="correct-answer">Correct Answer: b) Hub</div>
+        </div>
+
+        <div class="question">
+            7. Which device directs data between different networks?<br>
+            <input type="radio" name="q7" value="x"> a) Switch<br>
+            <input type="radio" name="q7" value="c"> b) Router<br>
+            <input type="radio" name="q7" value="x"> c) Hub<br>
+            <input type="radio" name="q7" value="x"> d) Modem<br>
+            <div class="correct-answer">Correct Answer: b) Router</div>
+        </div>
+
+        <div class="question">
+            8. What protocol breaks data into packets and routes them for reliable delivery?<br>
+            <input type="radio" name="q8" value="x"> a) FTP<br>
+            <input type="radio" name="q8" value="c"> b) TCP/IP<br>
+            <input type="radio" name="q8" value="x"> c) SMTP<br>
+            <input type="radio" name="q8" value="x"> d) HTTP<br>
+            <div class="correct-answer">Correct Answer: b) TCP/IP</div>
+        </div>
+
+        <div class="question">
+            9. Which wireless medium requires line-of-sight communication?<br>
+            <input type="radio" name="q9" value="x"> a) Radio<br>
+            <input type="radio" name="q9" value="c"> b) Microwave<br>
+            <input type="radio" name="q9" value="x"> c) Infrared<br>
+            <input type="radio" name="q9" value="x"> d) Wi-Fi<br>
+            <div class="correct-answer">Correct Answer: b) Microwave</div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <div class="score" id="scoreDisplay"></div>
+
+    <script>
+        function calculateScore() {
+            let score = 0;
+            const correct = document.querySelectorAll('input[value="c"]:checked');
+            score = correct.length;
+            document.getElementById("scoreDisplay").innerText = "Your Score: " + score + "/9";
+            document.querySelectorAll(".correct-answer").forEach(el => el.style.display = "block");
+        }
+    </script>
+</body>
+</html>

@@ -1,112 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Data Communication Quiz</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #2e6da4; }
-        .question { margin-bottom: 15px; }
-        .correct-answer { display: none; color: green; }
-        .score { font-size: 20px; margin-top: 20px; }
+        body {
+            font-family: Arial,
+            sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2e6da4;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .correct-answer {
+            display: none;
+            color: green;
+        }
+
+        .score {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
     <h1>Data Communication Quiz</h1>
     <form id="quizForm">
-        <div class="question">
-            1. What is the main goal of data communication in computer networks?<br>
-            <input type="radio" name="q1" value="x"> a) Printing documents<br>
-            <input type="radio" name="q1" value="x"> b) Sharing multimedia only<br>
-            <input type="radio" name="q1" value="c"> c) Reliable exchange of data between devices<br>
-            <input type="radio" name="q1" value="x"> d) Playing games<br>
-            <div class="correct-answer">Correct Answer: c) Reliable exchange of data between devices</div>
+        <div class="question">1. What is the main purpose of data communication?<br>
+            <input type="radio" name="q1" value="x"> a) Playing games<br>
+            <input type="radio" name="q1" value="c"> b) Exchanging data between devices<br>
+            <input type="radio" name="q1" value="x"> c) Making phone calls only<br>
+            <input type="radio" name="q1" value="x"> d) Printing documents<br>
+            <div class="correct-answer">Correct Answer: b) Exchanging data between devices</div>
+            <div class="result" id="result1"></div>
         </div>
-
-        <div class="question">
-            2. Which mode allows data to flow in both directions, but only one at a time?<br>
+        <div class="question">2. Which mode allows communication in both directions at the same time?<br>
             <input type="radio" name="q2" value="x"> a) Simplex<br>
-            <input type="radio" name="q2" value="c"> b) Half-Duplex<br>
-            <input type="radio" name="q2" value="x"> c) Full-Duplex<br>
-            <input type="radio" name="q2" value="x"> d) Analog<br>
-            <div class="correct-answer">Correct Answer: b) Half-Duplex</div>
+            <input type="radio" name="q2" value="x"> b) Half-Duplex<br>
+            <input type="radio" name="q2" value="c"> c) Full-Duplex<br>
+            <input type="radio" name="q2" value="x"> d) None of these<br>
+            <div class="correct-answer">Correct Answer: c) Full-Duplex</div>
+            <div class="result" id="result2"></div>
         </div>
-
-        <div class="question">
-            3. Which transmission medium uses light signals for data transmission?<br>
-            <input type="radio" name="q3" value="x"> a) Twisted Pair<br>
-            <input type="radio" name="q3" value="x"> b) Coaxial Cable<br>
-            <input type="radio" name="q3" value="c"> c) Optical Fiber<br>
-            <input type="radio" name="q3" value="x"> d) Infrared<br>
+        <div class="question">3. Which device connects different networks together?<br>
+            <input type="radio" name="q3" value="c"> a) Router<br>
+            <input type="radio" name="q3" value="x"> b) Hub<br>
+            <input type="radio" name="q3" value="x"> c) Modem<br>
+            <input type="radio" name="q3" value="x"> d) Keyboard<br>
+            <div class="correct-answer">Correct Answer: a) Router</div>
+            <div class="result" id="result3"></div>
+        </div>
+        <div class="question">4. Which protocol is used for loading websites?<br>
+            <input type="radio" name="q4" value="x"> a) SMTP<br>
+            <input type="radio" name="q4" value="c"> b) HTTP<br>
+            <input type="radio" name="q4" value="x"> c) FTP<br>
+            <input type="radio" name="q4" value="x"> d) TCP<br>
+            <div class="correct-answer">Correct Answer: b) HTTP</div>
+            <div class="result" id="result4"></div>
+        </div>
+        <div class="question">5. Which cable uses light to send data?<br>
+            <input type="radio" name="q5" value="x"> a) Twisted Pair<br>
+            <input type="radio" name="q5" value="x"> b) Coaxial Cable<br>
+            <input type="radio" name="q5" value="c"> c) Optical Fiber<br>
+            <input type="radio" name="q5" value="x"> d) USB Cable<br>
             <div class="correct-answer">Correct Answer: c) Optical Fiber</div>
+            <div class="result" id="result5"></div>
         </div>
-
-        <div class="question">
-            4. Which protocol is mainly used for sending and receiving email?<br>
-            <input type="radio" name="q4" value="x"> a) HTTP<br>
-            <input type="radio" name="q4" value="x"> b) FTP<br>
-            <input type="radio" name="q4" value="x"> c) TCP/IP<br>
-            <input type="radio" name="q4" value="c"> d) SMTP<br>
-            <div class="correct-answer">Correct Answer: d) SMTP</div>
+        <div class="question">6. What does TCP/IP do?<br>
+            <input type="radio" name="q6" value="x"> a) Sends emails<br>
+            <input type="radio" name="q6" value="c"> b) Breaks data into packets for sending<br>
+            <input type="radio" name="q6" value="x"> c) Connects to Wi-Fi<br>
+            <input type="radio" name="q6" value="x"> d) Makes phone calls<br>
+            <div class="correct-answer">Correct Answer: b) Breaks data into packets for sending</div>
+            <div class="result" id="result6"></div>
         </div>
-
-        <div class="question">
-            5. What type of data transmission sends one bit at a time and is good for long distances?<br>
-            <input type="radio" name="q5" value="x"> a) Parallel<br>
-            <input type="radio" name="q5" value="c"> b) Serial<br>
-            <input type="radio" name="q5" value="x"> c) Analog<br>
-            <input type="radio" name="q5" value="x"> d) Digital<br>
-            <div class="correct-answer">Correct Answer: b) Serial</div>
-        </div>
-
-        <div class="question">
-            6. Which network device broadcasts data to all devices in a network?<br>
-            <input type="radio" name="q6" value="x"> a) Switch<br>
-            <input type="radio" name="q6" value="c"> b) Hub<br>
-            <input type="radio" name="q6" value="x"> c) Modem<br>
-            <input type="radio" name="q6" value="x"> d) Router<br>
-            <div class="correct-answer">Correct Answer: b) Hub</div>
-        </div>
-
-        <div class="question">
-            7. Which device directs data between different networks?<br>
+        <div class="question">7. Which is NOT a network device?<br>
             <input type="radio" name="q7" value="x"> a) Switch<br>
-            <input type="radio" name="q7" value="c"> b) Router<br>
-            <input type="radio" name="q7" value="x"> c) Hub<br>
-            <input type="radio" name="q7" value="x"> d) Modem<br>
-            <div class="correct-answer">Correct Answer: b) Router</div>
+            <input type="radio" name="q7" value="x"> b) Router<br>
+            <input type="radio" name="q7" value="c"> c) Toaster<br>
+            <input type="radio" name="q7" value="x"> d) Hub<br>
+            <div class="correct-answer">Correct Answer: c) Toaster</div>
+            <div class="result" id="result7"></div>
         </div>
-
-        <div class="question">
-            8. What protocol breaks data into packets and routes them for reliable delivery?<br>
-            <input type="radio" name="q8" value="x"> a) FTP<br>
-            <input type="radio" name="q8" value="c"> b) TCP/IP<br>
-            <input type="radio" name="q8" value="x"> c) SMTP<br>
-            <input type="radio" name="q8" value="x"> d) HTTP<br>
-            <div class="correct-answer">Correct Answer: b) TCP/IP</div>
+        <div class="question">8. Which mode is like a walkie-talkie?<br>
+            <input type="radio" name="q8" value="x"> a) Simplex<br>
+            <input type="radio" name="q8" value="c"> b) Half-Duplex<br>
+            <input type="radio" name="q8" value="x"> c) Full-Duplex<br>
+            <input type="radio" name="q8" value="x"> d) None of these<br>
+            <div class="correct-answer">Correct Answer: b) Half-Duplex</div>
+            <div class="result" id="result8"></div>
         </div>
-
-        <div class="question">
-            9. Which wireless medium requires line-of-sight communication?<br>
-            <input type="radio" name="q9" value="x"> a) Radio<br>
-            <input type="radio" name="q9" value="c"> b) Microwave<br>
-            <input type="radio" name="q9" value="x"> c) Infrared<br>
-            <input type="radio" name="q9" value="x"> d) Wi-Fi<br>
-            <div class="correct-answer">Correct Answer: b) Microwave</div>
+        <div class="question">9. What is the fastest wired transmission medium?<br>
+            <input type="radio" name="q9" value="x"> a) Twisted Pair<br>
+            <input type="radio" name="q9" value="x"> b) Coaxial Cable<br>
+            <input type="radio" name="q9" value="c"> c) Optical Fiber<br>
+            <input type="radio" name="q9" value="x"> d) Power Line<br>
+            <div class="correct-answer">Correct Answer: c) Optical Fiber</div>
+            <div class="result" id="result9"></div>
         </div>
-
+        <div class="question">10. Which protocol is used for sending emails?<br>
+            <input type="radio" name="q10" value="x"> a) HTTP<br>
+            <input type="radio" name="q10" value="x"> b) FTP<br>
+            <input type="radio" name="q10" value="c"> c) SMTP<br>
+            <input type="radio" name="q10" value="x"> d) TCP<br>
+            <div class="correct-answer">Correct Answer: c) SMTP</div>
+            <div class="result" id="result10"></div>
+        </div>
         <button type="button" onclick="calculateScore()">Submit</button>
     </form>
-
     <div class="score" id="scoreDisplay"></div>
-
     <script>
         function calculateScore() {
             let score = 0;
-            const correct = document.querySelectorAll('input[value="c"]:checked');
-            score = correct.length;
-            document.getElementById("scoreDisplay").innerText = "Your Score: " + score + "/9";
+            for (let i = 1; i <= 10; i++) {
+                const questionName = "q" + i;
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                const resultDivId = "result" + i;
+                const resultDiv = document.getElementById(resultDivId);
+
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === "c") {
+                        score++;
+                        resultDiv.textContent = "Correct Answer! Score: 1";
+                        resultDiv.style.color = "green";
+                    } else {
+                        resultDiv.textContent = "Wrong Answer! Score: 0";
+                        resultDiv.style.color = "red";
+                    }
+                } else {
+                    resultDiv.textContent = "No Answer Selected! Score: 0";
+                    resultDiv.style.color = "red";
+                }
+            }
+
+            document.getElementById("scoreDisplay").innerText = "Your Total Score: " + score + "/10";
             document.querySelectorAll(".correct-answer").forEach(el => el.style.display = "block");
         }
     </script>
 </body>
+
 </html>
